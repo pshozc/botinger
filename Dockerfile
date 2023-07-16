@@ -1,3 +1,6 @@
+FROM pshozc/botinger:latest
+RUN git clone https://github.com/pshozc/botinger /root/botinger
 WORKDIR /
-RUN node .
-CMD ["npm install discord.js"]  
+RUN cd botinger
+RUN npm install discord.js
+CMD ["node ."] 
